@@ -3,8 +3,14 @@
   "description": "Remove Ads Link from google search result",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting"],
-  "action": {
-    "default_popup": "hello.html"
-  }
+  "content_scripts": [
+    {
+      "js": [
+        "remove_ads.js"
+      ],
+      "matches": [
+        "https://*.google.com/*"
+      ]
+    }
+  ]
 }
